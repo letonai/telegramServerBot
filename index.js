@@ -3,14 +3,15 @@ const Telegraf = require('telegraf');
 const { reply } = Telegraf;
 const { Markup,Extra } = Telegraf
 const storage = require('node-persist')
-const bot = new Telegraf("");
 const alertManager = require('./alertManager')
 const fileUtils = require('./fileUtils')
 const controllerHook = require('./controllerHook');
-
 var https = require('https');
 var fs = require('fs');
 const md5 = require('md5');
+
+var obj = JSON.parse(fs.readFileSync('apikey.cfg', 'utf8'));
+const bot = new Telegraf(obj.secret);
 const cmdTimeout = 60000;
 const AllowedUsers = "94530844,168282535"
 

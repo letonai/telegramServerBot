@@ -16,6 +16,6 @@
     "node-persist": "^2.1.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
-    "telegraf": "^3.12.1"
+    "socks-proxy-agent": "^4.0.1"
   }
 }
